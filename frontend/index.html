@@ -25,6 +25,8 @@
     <link rel="stylesheet" href="./style/style.css" />
     <!-- vue -->
     <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+    <!-- axios -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <!-- js -->
     <script src="./js/main.js" type="text/javascript" defer></script>
     <!-- title -->
@@ -42,12 +44,12 @@
     </header>
     <main>
       <div class="container-fluid d-flex flex-wrap">
-        <div class="card" style="width: 18rem">
-          <img src="..." class="card-img-top" alt="..." />
+        <div class="card" style="width: 18rem" v-for="(disk, index) in disks">
+          <img :src="disk.poster" class="card-img-top" alt="..." />
           <div class="card-body text-center">
-            <p class="card-text">Titolo</p>
-            <p class="card-text">Autore</p>
-            <p class="card-text">Anno</p>
+            <p class="card-text">{{disk.title}}</p>
+            <p class="card-text">{{disk.author}}</p>
+            <p class="card-text">{{disk.year}}</p>
           </div>
         </div>
       </div>
