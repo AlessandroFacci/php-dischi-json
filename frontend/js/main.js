@@ -10,7 +10,7 @@ createApp({
   methods: {
     getDiscks() {
       axios
-        .get("http://localhost:8888/php-dischi-json/backend/data/dischi.json")
+        .get("http://localhost:8888/php-dischi-json/backend/data/dischi.php")
         .then((response) => {
           console.log(response.data);
 
